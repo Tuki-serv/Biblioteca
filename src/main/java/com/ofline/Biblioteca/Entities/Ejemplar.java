@@ -1,6 +1,6 @@
-package com.ofline.demo.Entities;
+package com.ofline.Biblioteca.Entities;
 
-import com.ofline.demo.Entities.Enums.EstadoEjemplar;
+import com.ofline.Biblioteca.Entities.Enums.EstadoEjemplar;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;

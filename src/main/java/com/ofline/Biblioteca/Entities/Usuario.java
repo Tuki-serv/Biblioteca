@@ -1,4 +1,4 @@
-package com.ofline.demo.Entities;
+package com.ofline.Biblioteca.Entities;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;

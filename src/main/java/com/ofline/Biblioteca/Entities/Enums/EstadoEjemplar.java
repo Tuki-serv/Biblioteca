@@ -1,4 +1,4 @@
-package com.ofline.demo.Entities.Enums;
+package com.ofline.Biblioteca.Entities.Enums;
 
 public enum EstadoEjemplar {
     DISPONIBLE,

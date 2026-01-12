@@ -1,4 +1,4 @@
-package com.ofline.demo.Entities;
+package com.ofline.Biblioteca.Entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
