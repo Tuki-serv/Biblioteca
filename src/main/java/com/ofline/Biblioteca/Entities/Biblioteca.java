@@ -1,5 +1,7 @@
 package com.ofline.Biblioteca.Entities;
 
+import com.ofline.Biblioteca.Entities.Publicaciones.Ejemplar;
+import com.ofline.Biblioteca.Entities.Publicaciones.Libro.Direccion;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.*;

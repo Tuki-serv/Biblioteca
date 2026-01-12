@@ -1,5 +1,6 @@
-package com.ofline.Biblioteca.Entities;
+package com.ofline.Biblioteca.Entities.Publicaciones;
 
+import com.ofline.Biblioteca.Entities.BaseEntity;
 import jakarta.persistence.Entity;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
@@ -11,7 +12,7 @@ import org.hibernate.annotations.SQLDelete;
 @Getter
 @Setter
 @SQLDelete(sql = "UPDATE genero SET deleted = true WHERE id = ? AND version = ?")
-public class Genero extends BaseEntity{
+public class Genero extends BaseEntity {
     private String nombre;
     private String descripcion;
 }

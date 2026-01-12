@@ -1,5 +1,7 @@
-package com.ofline.Biblioteca.Entities;
+package com.ofline.Biblioteca.Entities.Publicaciones;
 
+import com.ofline.Biblioteca.Entities.BaseEntity;
+import com.ofline.Biblioteca.Entities.Biblioteca;
 import com.ofline.Biblioteca.Entities.Enums.EstadoEjemplar;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -14,7 +16,7 @@ import org.hibernate.annotations.SQLDelete;
 @Getter
 @Setter
 @SQLDelete(sql = "UPDATE ejemplar SET deleted = true WHERE id = ? AND version = ?")
-public class Ejemplar extends BaseEntity{
+public class Ejemplar extends BaseEntity {
     private String codigo;
     private EstadoEjemplar estado;
 
@@ -28,5 +30,4 @@ public class Ejemplar extends BaseEntity{
     private Biblioteca biblioteca;
 
     private Boolean disponible;
-
 }

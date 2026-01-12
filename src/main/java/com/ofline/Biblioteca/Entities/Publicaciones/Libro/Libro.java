@@ -1,5 +1,6 @@
-package com.ofline.Biblioteca.Entities;
+package com.ofline.Biblioteca.Entities.Publicaciones.Libro;
 
+import com.ofline.Biblioteca.Entities.Publicaciones.Publicacion;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
@@ -17,7 +18,7 @@ import java.util.List;
 @Getter
 @Setter
 @SQLDelete(sql = "UPDATE libro SET deleted = true WHERE id = ? AND version = ?")
-public class Libro extends Publicacion{
+public class Libro extends Publicacion {
     private String isbn;
 
     @OneToMany

@@ -1,5 +1,7 @@
-package com.ofline.Biblioteca.Entities;
+package com.ofline.Biblioteca.Entities.Usuario;
 
+import com.ofline.Biblioteca.Entities.BaseEntity;
+import com.ofline.Biblioteca.Entities.Publicaciones.Ejemplar;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -15,7 +17,7 @@ import java.util.Date;
 @Getter
 @Setter
 @SQLDelete(sql = "UPDATE lineaPrestamo SET deleted = true WHERE id = ? AND version = ?")
-public class LineaPrestamo extends BaseEntity{
+public class LineaPrestamo extends BaseEntity {
     private Date fechaDevolucionEstimada;
 
     @ManyToOne

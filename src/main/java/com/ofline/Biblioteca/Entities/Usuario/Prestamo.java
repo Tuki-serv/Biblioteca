@@ -1,5 +1,6 @@
-package com.ofline.Biblioteca.Entities;
+package com.ofline.Biblioteca.Entities.Usuario;
 
+import com.ofline.Biblioteca.Entities.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
@@ -15,7 +16,7 @@ import java.util.List;
 @Getter
 @Setter
 @SQLDelete(sql = "UPDATE pretamo SET deleted = true WHERE id = ? AND version = ?")
-public class Prestamo extends BaseEntity{
+public class Prestamo extends BaseEntity {
     private Date fechaPrestamo;
     private Date fechaDevolucion;
 

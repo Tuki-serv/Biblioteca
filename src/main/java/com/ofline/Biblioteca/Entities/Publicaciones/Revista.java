@@ -1,4 +1,4 @@
-package com.ofline.Biblioteca.Entities;
+package com.ofline.Biblioteca.Entities.Publicaciones;
 
 import jakarta.persistence.Entity;
 import lombok.*;
@@ -11,7 +11,7 @@ import org.hibernate.annotations.SQLDelete;
 @Getter
 @Setter
 @SQLDelete(sql = "UPDATE revista SET deleted = true WHERE id = ? AND version = ?")
-public class Revista extends Publicacion{
+public class Revista extends Publicacion {
     private int volumen;
     private int numero;
 }
