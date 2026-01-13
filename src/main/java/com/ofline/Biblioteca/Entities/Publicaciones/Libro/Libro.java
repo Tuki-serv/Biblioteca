@@ -1,10 +1,7 @@
 package com.ofline.Biblioteca.Entities.Publicaciones.Libro;
 
 import com.ofline.Biblioteca.Entities.Publicaciones.Publicacion;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 
@@ -26,9 +23,8 @@ public class Libro extends Publicacion {
     @Builder.Default
     private List<Autor> autores = new ArrayList<>();
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "editorial_id", nullable = false)
-    @Builder.Default
     private Editorial editorial;
 
 }

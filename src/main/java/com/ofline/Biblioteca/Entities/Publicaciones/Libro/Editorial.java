@@ -2,6 +2,8 @@ package com.ofline.Biblioteca.Entities.Publicaciones.Libro;
 
 import com.ofline.Biblioteca.Entities.BaseEntity;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 
@@ -15,5 +17,8 @@ import org.hibernate.annotations.SQLDelete;
 public class Editorial extends BaseEntity {
     private String nombre;
     private String sitioWeb;
+
+    @OneToOne
+    @JoinColumn(name = "direccion_id", nullable = false)
     private Direccion direccion;
 }

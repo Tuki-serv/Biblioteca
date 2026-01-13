@@ -24,5 +24,8 @@ public class LineaPrestamo extends BaseEntity {
     @JoinColumn(name = "prestamo_id", nullable = false)
     private Prestamo prestamo;
 
+
+    @ManyToOne
+    @JoinColumn(name = "ejemplar_id", nullable = false)
     private Ejemplar ejemplar;
 }

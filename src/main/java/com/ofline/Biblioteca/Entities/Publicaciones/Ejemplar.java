@@ -3,9 +3,7 @@ package com.ofline.Biblioteca.Entities.Publicaciones;
 import com.ofline.Biblioteca.Entities.BaseEntity;
 import com.ofline.Biblioteca.Entities.Biblioteca;
 import com.ofline.Biblioteca.Entities.Enums.EstadoEjemplar;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 
@@ -18,6 +16,8 @@ import org.hibernate.annotations.SQLDelete;
 @SQLDelete(sql = "UPDATE ejemplar SET deleted = true WHERE id = ? AND version = ?")
 public class Ejemplar extends BaseEntity {
     private String codigo;
+
+    @Enumerated(EnumType.STRING)
     private EstadoEjemplar estado;
 
     @ManyToOne
