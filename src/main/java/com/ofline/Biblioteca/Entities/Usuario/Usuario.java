@@ -5,14 +5,16 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.SQLDelete;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@SuperBuilder
 @Getter
 @Setter
 @SQLDelete(sql = "UPDATE usuario SET deleted = true WHERE id = ? AND version = ?")
@@ -23,5 +25,5 @@ public class Usuario extends BaseEntity {
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
     @Builder.Default
-    private List<Prestamo> prestamos;
+    private List<Prestamo> prestamos = new ArrayList<>();
 }

@@ -5,12 +5,13 @@ import com.ofline.Biblioteca.Entities.Biblioteca;
 import com.ofline.Biblioteca.Entities.Enums.EstadoEjemplar;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@SuperBuilder
 @Getter
 @Setter
 @SQLDelete(sql = "UPDATE ejemplar SET deleted = true WHERE id = ? AND version = ?")

@@ -3,6 +3,7 @@ package com.ofline.Biblioteca.Entities.Usuario;
 import com.ofline.Biblioteca.Entities.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.SQLDelete;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@SuperBuilder
 @Getter
 @Setter
 @SQLDelete(sql = "UPDATE pretamo SET deleted = true WHERE id = ? AND version = ?")

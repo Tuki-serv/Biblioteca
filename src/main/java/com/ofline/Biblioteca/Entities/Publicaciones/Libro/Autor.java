@@ -3,6 +3,7 @@ package com.ofline.Biblioteca.Entities.Publicaciones.Libro;
 import com.ofline.Biblioteca.Entities.BaseEntity;
 import jakarta.persistence.Entity;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.SQLDelete;
 
 import java.time.LocalDate;
@@ -10,7 +11,7 @@ import java.time.LocalDate;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@SuperBuilder
 @Getter
 @Setter
 @SQLDelete(sql = "UPDATE autor SET deleted = true WHERE id = ? AND version = ?")

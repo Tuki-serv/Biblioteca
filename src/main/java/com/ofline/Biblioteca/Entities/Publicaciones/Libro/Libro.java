@@ -3,6 +3,7 @@ package com.ofline.Biblioteca.Entities.Publicaciones.Libro;
 import com.ofline.Biblioteca.Entities.Publicaciones.Publicacion;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.SQLDelete;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@SuperBuilder
 @Getter
 @Setter
 @SQLDelete(sql = "UPDATE libro SET deleted = true WHERE id = ? AND version = ?")
